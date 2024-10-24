@@ -1,0 +1,34 @@
+#include <iostream>
+#include <stack>
+#include<queue>
+#include<set>
+#include<map>
+#include<algorithm>
+#include<cmath>
+#include<stdio.h>
+#include<unordered_set>
+#include<unordered_map>
+#include<string.h>
+#include<typeinfo>
+#define Fast   ios_base::sync_with_stdio(false) ; cin.tie(NULL);
+#define endl '\n'
+#define ll long long
+using namespace std;
+
+
+int main() {
+   Fast;
+
+
+   string a;
+	cin >> a;
+	a.erase(remove(a.begin(), a.end(), '+'), a.end());
+	sort(a.begin(), a.end());
+	for (int i = 0; i < a.size(); i++)
+	{
+		if (i < a.size() - 1)
+			cout << a[i] << '+';
+		else
+			cout << a[i];
+	}
+}
